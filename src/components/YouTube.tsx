@@ -1,14 +1,24 @@
 import Image from "next/image";
-import { leagueSpartan, dmSans, dancingScript } from "@/lib/fonts";
+import { bebasNeue, dmSans, dancingScript } from "@/lib/fonts";
 
 export default function YouTube() {
   return (
-    <section className="bg-native-cream py-16 px-6 md:px-16">
+    <section className="bg-native-cream py-16 px-6 md:px-16 relative overflow-visible">
+      {/* Passport stamps decoration */}
+      <Image
+        src="/images/decoration-1.png"
+        alt=""
+        width={300}
+        height={300}
+        className="absolute top-8 right-4 w-40 md:w-64 opacity-60 pointer-events-none"
+        aria-hidden="true"
+      />
+
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 max-w-6xl mx-auto">
         {/* Left: text content */}
         <div className="md:w-1/2">
           <h2
-            className={`${leagueSpartan.className} text-2xl md:text-3xl text-native-brown mb-6 uppercase tracking-wide`}
+            className={`${bebasNeue.className} text-4xl md:text-5xl lg:text-6xl text-native-brown mb-6 uppercase tracking-wide`}
           >
             <span aria-hidden="true">📺 🎥 </span>Watch + Follow
             <br />
@@ -21,7 +31,7 @@ export default function YouTube() {
             nomadic changemakers across the globe.
           </p>
           <ul
-            className={`${dmSans.className} space-y-2 text-native-brown/80 text-sm md:text-base mb-8 list-disc pl-5`}
+            className={`${dmSans.className} space-y-2 text-native-brown/80 text-sm md:text-base mb-4 list-disc pl-5`}
           >
             <li>Culturally-rooted brand partnerships</li>
             <li>Extended stay & artist residency matchmaking</li>
@@ -39,15 +49,16 @@ export default function YouTube() {
             look here
           </a>
         </div>
-        {/* Right: tree illustration */}
-        <div className="md:w-1/2 flex items-center justify-center">
+        {/* Right: tree illustration — overflows into Community section */}
+        <div className="md:w-1/2 flex items-start justify-center relative">
           <Image
             src="/images/logo-alt.png"
             alt="Tree illustration"
             width={798}
             height={472}
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain md:mt-8 relative z-20"
+            style={{ marginBottom: "-120px" }}
           />
         </div>
       </div>

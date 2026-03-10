@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { leagueSpartan, dmSans } from "@/lib/fonts";
+import { bebasNeue, dmSans } from "@/lib/fonts";
 
 export default function Community() {
   return (
@@ -11,6 +11,16 @@ export default function Community() {
         fill
         sizes="100vw"
         className="object-cover"
+      />
+
+      {/* Passport stamps decoration */}
+      <Image
+        src="/images/decoration-2.png"
+        alt=""
+        width={300}
+        height={300}
+        className="absolute top-12 right-4 w-40 md:w-56 opacity-50 pointer-events-none z-20"
+        aria-hidden="true"
       />
 
       <div className="relative z-10 flex flex-col md:flex-row min-h-dvh">
@@ -28,7 +38,7 @@ export default function Community() {
         {/* Right: signup content */}
         <div className="md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-16">
           <h2
-            className={`${leagueSpartan.className} text-3xl md:text-4xl lg:text-5xl text-native-white mb-8 uppercase tracking-wide leading-tight`}
+            className={`${bebasNeue.className} text-4xl md:text-5xl lg:text-6xl text-native-white mb-8 uppercase tracking-wide leading-tight`}
           >
             <span aria-hidden="true">📥 </span>Join the Native
             <br />
@@ -57,7 +67,7 @@ export default function Community() {
             href="https://forms.gle/TcB6cx6fcfrr6YxKA"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${leagueSpartan.className} inline-block bg-native-white text-native-brown px-8 py-4 rounded-sm text-lg font-medium uppercase tracking-wider hover:bg-native-beige transition-colors text-center`}
+            className={`${bebasNeue.className} inline-block bg-native-white text-native-brown px-8 py-4 rounded-sm text-lg font-medium uppercase tracking-wider hover:bg-native-beige transition-colors text-center`}
           >
             Join Our Email List
           </a>

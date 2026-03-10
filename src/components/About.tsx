@@ -50,14 +50,6 @@ export default function About() {
             />
           </div>
           <div className="md:w-1/2 flex flex-col gap-6 justify-end">
-            <Image
-              src="/images/about-landscape-1.jpg"
-              alt="People in the ocean"
-              width={700}
-              height={799}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="w-full h-auto object-cover"
-            />
             <p
               className={`${dmSans.className} text-lg md:text-xl text-native-beige leading-relaxed`}
             >
