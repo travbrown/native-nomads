@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { dancingScript, dmSans, leagueSpartan } from "@/lib/fonts";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${dancingScript.variable} ${dmSans.variable} ${leagueSpartan.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
