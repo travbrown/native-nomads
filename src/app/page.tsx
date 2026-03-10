@@ -7,10 +7,12 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <YouTube />
-      <Community />
+      <main>
+        <Hero />
+        <About />
+        <YouTube />
+        <Community />
+      </main>
       <Footer />
     </>
   );
