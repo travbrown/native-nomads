@@ -1,40 +1,67 @@
 "use client";
 
+import Image from "next/image";
 import { leagueSpartan, dmSans } from "@/lib/fonts";
 
 export default function Community() {
   return (
-    <section className="bg-native-brown py-20 px-6 md:px-16">
-      <div className="max-w-2xl mx-auto text-center">
-        <h2
-          className={`${leagueSpartan.className} text-3xl md:text-5xl text-native-white mb-6`}
-        >
-          ✉️ Join the Community
-        </h2>
-        <p
-          className={`${dmSans.className} text-lg text-native-beige mb-8`}
-        >
-          Be part of a global network of creators, travelers, and dreamers.
-        </p>
-        <ul className="space-y-4 text-left max-w-md mx-auto mb-10">
-          <li className="text-native-beige text-base">
-            ✦ Exclusive behind-the-scenes content from our global adventures
-          </li>
-          <li className="text-native-beige text-base">
-            ✦ Early access to collaborations and creative opportunities
-          </li>
-          <li className="text-native-beige text-base">
-            ✦ Connect with like-minded nomads and creators worldwide
-          </li>
-        </ul>
-        <a
-          href="https://forms.gle/TcB6cx6fcfrr6YxKA"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-native-blue hover:bg-native-blue/80 text-native-white px-8 py-3 rounded-full text-lg font-medium transition-colors"
-        >
-          Sign Up Now
-        </a>
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Warm gradient background */}
+      <Image
+        src="/images/youtube-bg.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-amber-700/60 to-orange-600/70" />
+
+      <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
+        {/* Left: large photo */}
+        <div className="md:w-1/2 relative min-h-[50vh] md:min-h-screen">
+          <Image
+            src="/images/about-landscape-2.jpg"
+            alt="City view from above"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
+
+        {/* Right: signup content */}
+        <div className="md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-16">
+          <h2
+            className={`${leagueSpartan.className} text-3xl md:text-4xl lg:text-5xl text-native-white mb-8 uppercase tracking-wide leading-tight`}
+          >
+            📥 Join the Native
+            <br />
+            Nomads Community
+          </h2>
+          <p
+            className={`${dmSans.className} text-lg text-native-white/90 mb-4 font-medium`}
+          >
+            Sign up to receive:
+          </p>
+          <div className={`${dmSans.className} space-y-3 mb-10`}>
+            <p className="text-native-white/90">
+              🌍 Global funding + residency opportunities
+            </p>
+            <p className="text-native-white/90">
+              💼 Collab calls + featured projects
+            </p>
+            <p className="text-native-white/90">
+              📬 Exclusive YouTube video drops + insights
+            </p>
+          </div>
+          <a
+            href="https://forms.gle/TcB6cx6fcfrr6YxKA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${leagueSpartan.className} inline-block bg-native-white text-native-brown px-8 py-4 rounded-sm text-lg font-medium uppercase tracking-wider hover:bg-native-beige transition-colors text-center`}
+          >
+            Join Our Email List
+          </a>
+        </div>
       </div>
     </section>
   );

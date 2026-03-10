@@ -6,32 +6,42 @@ import GrainOverlay from "./GrainOverlay";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen overflow-hidden">
       <Image
-        src="/images/hero-bg.jpg"
-        alt=""
+        src="/images/gallery-3.jpg"
+        alt="Woman in green field"
         fill
         priority
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="relative z-10 flex h-full items-center justify-center">
-        <div className="text-center">
+      <div className="absolute inset-0 bg-black/30" />
+      <div className="relative z-10 flex h-full flex-col justify-center px-6 md:px-16">
+        <h1
+          className={`${leagueSpartan.className} text-[4rem] md:text-[8rem] lg:text-[10rem] font-bold uppercase leading-[0.85] tracking-tight text-native-white`}
+        >
+          Native
+        </h1>
+        <p
+          className={`${dancingScript.className} -mt-2 text-[3.5rem] md:text-[7rem] lg:text-[9rem] leading-[0.9] text-native-white`}
+        >
+          Nomads
+        </p>
+        <div className="mt-8 md:mt-12 md:self-end md:text-right">
           <p
-            className={`${leagueSpartan.className} text-lg uppercase tracking-[0.3em] text-native-beige`}
+            className={`${dmSans.className} text-base md:text-lg text-native-beige`}
           >
-            NATIVE
+            Live globally.
           </p>
-          <h1
-            className={`${dancingScript.className} text-7xl md:text-9xl text-native-white`}
-          >
-            Nomads
-          </h1>
           <p
-            className={`${dmSans.className} mt-4 text-lg text-native-beige`}
+            className={`${dmSans.className} text-base md:text-lg text-native-beige`}
           >
-            Live Globally. Connect Deeply.
+            Connect deeply.
+          </p>
+          <p
+            className={`${dmSans.className} text-base md:text-lg text-native-beige`}
+          >
+            Move with meaning.
           </p>
         </div>
       </div>

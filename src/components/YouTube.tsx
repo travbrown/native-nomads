@@ -1,35 +1,57 @@
 "use client";
 
-import ParallaxSection from "./ParallaxSection";
-import { leagueSpartan, dmSans } from "@/lib/fonts";
+import Image from "next/image";
+import { leagueSpartan, dmSans, dancingScript } from "@/lib/fonts";
 
 export default function YouTube() {
   return (
-    <ParallaxSection
-      backgroundImage="/images/youtube-bg.jpg"
-      overlayOpacity={0.6}
-    >
-      <div className="flex flex-col items-center justify-center min-h-screen text-center px-6">
-        <h2
-          className={`${leagueSpartan.className} text-3xl md:text-5xl text-native-white mb-6`}
-        >
-          📺 Watch Our Journey
-        </h2>
-        <p
-          className={`${dmSans.className} text-lg text-native-beige max-w-2xl mb-8`}
-        >
-          Follow our adventures across the globe as we connect with creators,
-          explore cultures, and build something beautiful together.
-        </p>
-        <a
-          href="https://www.youtube.com/@UC0h7vzxHTVuT_9rpfnc3mAw"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-native-blue hover:bg-native-blue/80 text-native-white px-8 py-3 rounded-full text-lg font-medium transition-colors"
-        >
-          Visit Our Channel
-        </a>
+    <section className="bg-native-cream py-16 px-6 md:px-16">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-16 max-w-6xl mx-auto">
+        {/* Left: text content */}
+        <div className="md:w-1/2">
+          <h2
+            className={`${leagueSpartan.className} text-2xl md:text-3xl text-native-brown mb-6 uppercase tracking-wide`}
+          >
+            📺 🎥 Watch + Follow
+            <br />
+            Native Nomads on YouTube
+          </h2>
+          <p
+            className={`${dmSans.className} text-base md:text-lg text-native-brown/80 mb-6 leading-relaxed`}
+          >
+            We document our travels, creative projects, and conversations with
+            nomadic changemakers across the globe.
+          </p>
+          <ul
+            className={`${dmSans.className} space-y-2 text-native-brown/80 text-sm md:text-base mb-8 list-disc pl-5`}
+          >
+            <li>Culturally-rooted brand partnerships</li>
+            <li>Extended stay & artist residency matchmaking</li>
+            <li>Curated creative collaborations</li>
+            <li>Travel-based storytelling opportunities</li>
+            <li>A global community of movement-based entrepreneurs</li>
+          </ul>
+          <a
+            href="https://www.youtube.com/channel/UC0h7vzxHTVuT_9rpfnc3mAw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${dancingScript.className} text-3xl md:text-4xl text-native-brown hover:text-native-blue transition-colors underline decoration-1 underline-offset-4`}
+          >
+            look here
+          </a>
+        </div>
+        {/* Right: tree illustration */}
+        <div className="md:w-1/2 flex items-center justify-center">
+          <Image
+            src="/images/logo-alt.png"
+            alt="Tree illustration"
+            width={798}
+            height={472}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </div>
-    </ParallaxSection>
+    </section>
   );
 }
