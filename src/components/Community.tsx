@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { bebasNeue, dmSans } from "@/lib/fonts";
+import { bebasNeue, dancingScript, dmSans } from "@/lib/fonts";
 
 export default function Community() {
   return (
@@ -15,7 +15,7 @@ export default function Community() {
 
       {/* Passport stamps decoration */}
       <Image
-        src="/images/decoration-2.png"
+        src="/images/passport-stamps-dark.png"
         alt=""
         width={300}
         height={300}
@@ -45,7 +45,7 @@ export default function Community() {
             Nomads Community
           </h2>
           <p
-            className={`${dmSans.className} text-lg text-native-white/90 mb-4 font-medium`}
+            className={`${dancingScript.className} text-lg text-native-white/90 mb-4 font-medium`}
           >
             Sign up to receive:
           </p>

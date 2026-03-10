@@ -3,53 +3,41 @@ import { dmSans } from "@/lib/fonts";
 
 export default function About() {
   return (
-    <section className="bg-native-brown text-native-white">
-      {/* Block 1: Agency intro — fire art left, text + woman sitting right */}
-      <div className="py-16 px-6 md:px-16">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 max-w-6xl mx-auto">
-          <div className="md:w-1/3">
+    <section className="bg-[#6b1c1c] text-native-white">
+      <div className="py-12 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[35%_25%_30%] gap-6 md:gap-8">
+          {/* Col 1: Fire art — landscape */}
+          <div className="md:pl-8 self-start">
             <Image
               src="/images/service-content.jpg"
               alt="Fire light art at dusk"
               width={640}
-              height={800}
-              sizes="(max-width: 768px) 100vw, 33vw"
+              height={420}
+              sizes="(max-width: 768px) 100vw, 35vw"
               className="w-full h-auto object-cover"
             />
           </div>
-          <div className="md:w-2/3 flex flex-col gap-6">
+
+          {/* Col 2: Agency intro text — vertically centered */}
+          <div className="flex items-center">
             <p
-              className={`${dmSans.className} text-xl md:text-2xl text-native-beige leading-relaxed max-w-sm`}
+              className={`${dmSans.className} text-xl md:text-2xl text-native-beige leading-relaxed`}
             >
               Native Nomads is a global creative agency and digital connector
               platform.
             </p>
+          </div>
+
+          {/* Col 3: B&W ocean portrait (offset lower) + text below */}
+          <div className="flex flex-col gap-6 md:mt-24">
             <Image
               src="/images/about-portrait-2.jpg"
-              alt="Woman sitting peacefully"
+              alt="People in the ocean"
               width={641}
               height={799}
-              sizes="(max-width: 768px) 100vw, 45vw"
-              className="w-full md:w-3/4 h-auto object-cover self-end"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Block 2: Movement is medicine — man portrait left, ocean photo + text right */}
-      <div className="py-16 px-6 md:px-16">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 max-w-6xl mx-auto">
-          <div className="md:w-1/2">
-            <Image
-              src="/images/community-bg.jpg"
-              alt="Man in warm evening light"
-              width={800}
-              height={640}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 30vw"
               className="w-full h-auto object-cover"
             />
-          </div>
-          <div className="md:w-1/2 flex flex-col gap-6 justify-end">
             <p
               className={`${dmSans.className} text-lg md:text-xl text-native-beige leading-relaxed`}
             >
@@ -58,30 +46,25 @@ export default function About() {
             </p>
           </div>
         </div>
-      </div>
 
-      {/* Block 3: Help artists — portrait left, text right */}
-      <div className="py-16 px-6 md:px-16">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 max-w-6xl mx-auto items-center">
-          <div className="md:w-1/2">
+        {/* Group 2: Wide landscape image overlapping up + text below */}
+        <div className="max-w-6xl mx-auto md:-mt-32 pt-4">
+          <div className="md:w-[65%] aspect-[16/7] relative overflow-hidden">
             <Image
-              src="/images/hero-bg.jpg"
-              alt="Portrait"
-              width={640}
-              height={800}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="w-full h-auto object-cover"
+              src="/images/community-bg.jpg"
+              alt="Man in warm evening light"
+              fill
+              sizes="(max-width: 768px) 100vw, 65vw"
+              className="object-cover object-center"
             />
           </div>
-          <div className="md:w-1/2">
-            <p
-              className={`${dmSans.className} text-lg md:text-xl text-native-beige leading-relaxed`}
-            >
-              We help artists, culture keepers, practitioners, and storytellers
-              explore the world while building sustainable income through
-              collaborations, experiences, and storytelling.
-            </p>
-          </div>
+          <p
+            className={`${dmSans.className} text-lg md:text-xl text-native-beige leading-relaxed mt-6`}
+          >
+            We help artists, culture keepers, practitioners, and storytellers
+            explore the world while building sustainable income through
+            collaborations, experiences, and storytelling.
+          </p>
         </div>
       </div>
     </section>

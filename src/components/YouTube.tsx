@@ -4,16 +4,6 @@ import { bebasNeue, dmSans, dancingScript } from "@/lib/fonts";
 export default function YouTube() {
   return (
     <section className="bg-native-cream py-16 px-6 md:px-16 relative overflow-visible">
-      {/* Passport stamps decoration */}
-      <Image
-        src="/images/decoration-1.png"
-        alt=""
-        width={300}
-        height={300}
-        className="absolute top-8 right-4 w-40 md:w-64 opacity-60 pointer-events-none"
-        aria-hidden="true"
-      />
-
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 max-w-6xl mx-auto">
         {/* Left: text content */}
         <div className="md:w-1/2">
@@ -50,15 +40,15 @@ export default function YouTube() {
           </a>
         </div>
         {/* Right: tree illustration — overflows into Community section */}
-        <div className="md:w-1/2 flex items-start justify-center relative">
+        <div className="md:w-1/2 flex items-center justify-center relative">
           <Image
-            src="/images/logo-alt.png"
-            alt="Tree illustration"
-            width={798}
-            height={472}
+            src="/images/tree-illustration.png"
+            alt="Hand-drawn tree with swing illustration"
+            width={700}
+            height={799}
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="w-full h-auto object-contain md:mt-8 relative z-20"
-            style={{ marginBottom: "-120px" }}
+            className="w-full h-auto object-contain relative z-30"
+            style={{ marginBottom: "-80px" }}
           />
         </div>
       </div>
