@@ -4,6 +4,7 @@ import { dancingScript, dmSans, leagueSpartan } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://native-nomads.vercel.app"),
   title: "Native Nomads — Live Globally. Connect Deeply.",
   description:
     "A global creative agency and digital connector platform. Branding, content creation, social media, and community building across borders.",
