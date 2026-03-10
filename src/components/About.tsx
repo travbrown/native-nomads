@@ -64,6 +64,7 @@ export default function About() {
               alt={service.title}
               width={500}
               height={400}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="rounded-lg object-cover"
             />
             <div>
