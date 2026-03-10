@@ -6,7 +6,7 @@ import { leagueSpartan, dmSans } from "@/lib/fonts";
 export default function Community() {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Warm gradient background */}
+      {/* Warm amber gradient background */}
       <Image
         src="/images/youtube-bg.jpg"
         alt=""
@@ -14,14 +14,13 @@ export default function Community() {
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-amber-700/60 to-orange-600/70" />
 
       <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
-        {/* Left: large photo */}
+        {/* Left: fisheye city photo */}
         <div className="md:w-1/2 relative min-h-[50vh] md:min-h-screen">
           <Image
-            src="/images/about-landscape-2.jpg"
-            alt="City view from above"
+            src="/images/about-portrait-1.jpg"
+            alt="Looking down over the city"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
