@@ -69,3 +69,9 @@ body {
   pointer-events: none;
   z-index: 100;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .grain-overlay {
+    animation: none;
+  }
+}

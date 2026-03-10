@@ -1,12 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import { leagueSpartan, dancingScript, dmSans } from "@/lib/fonts";
-import GrainOverlay from "./GrainOverlay";
+import GrainOverlay from "@/components/GrainOverlay";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-dvh overflow-hidden">
       <Image
         src="/images/gallery-3.jpg"
         alt="Woman in green field"

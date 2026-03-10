@@ -1,5 +1,3 @@
-"use client";
-
 import { dmSans } from "@/lib/fonts";
 
 export default function Footer() {
@@ -25,7 +23,7 @@ export default function Footer() {
           YouTube
         </a>
       </div>
-      <p className="text-native-beige/50 text-xs">
+      <p className="text-native-beige/70 text-xs">
         © 2026 Native Nomads. All rights reserved.
       </p>
     </footer>

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { leagueSpartan, dmSans, dancingScript } from "@/lib/fonts";
 
@@ -12,7 +10,7 @@ export default function YouTube() {
           <h2
             className={`${leagueSpartan.className} text-2xl md:text-3xl text-native-brown mb-6 uppercase tracking-wide`}
           >
-            📺 🎥 Watch + Follow
+            <span aria-hidden="true">📺 🎥 </span>Watch + Follow
             <br />
             Native Nomads on YouTube
           </h2>
@@ -36,6 +34,7 @@ export default function YouTube() {
             target="_blank"
             rel="noopener noreferrer"
             className={`${dancingScript.className} text-3xl md:text-4xl text-native-brown hover:text-native-blue transition-colors underline decoration-1 underline-offset-4`}
+            aria-label="Visit Native Nomads YouTube channel"
           >
             look here
           </a>
